@@ -11,10 +11,10 @@ This is a tutorial on how to build a Python .whl package.
 ├─README.Md
 │
 ├─src
-|   ├─Package_Dir(diseasesClassification)
+|   ├─Package_Dir(packageName)
 |                ├─__init__.py
 │                |
-|                ├─pythonfile.py
+|                ├─package.py
 |
 </pre>
 
@@ -139,10 +139,10 @@ This command should output a lot of text and once completed should generate two 
 ├─README.Md
 │
 ├─src
-|   ├─Package_Dir(diseasesClassification)
+|   ├─Package_Dir(packageName)
 |                ├─__init__.py
 │                |
-|                ├─pythonfile.py
+|                ├─package.py
 |
 │
 ├─dist
@@ -164,8 +164,8 @@ python3 -m twine upload --repository testpypi dist/*
 ```
 
 ## Installing packages from sources
-```python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps package_name```
-```python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps package_name==verion```
+```python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps package_name``` <br>
+```python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps package_name==verion```<br>
 ```python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps package_name==0.0.1```
 
 
@@ -175,8 +175,9 @@ python3
 ```
 and import the package:
 ```
->>> from packagename import function_or_classname
->>> call_function(parameters)
+>>> from packageName import package
+>>> package.add_two_number(2,3)
+5
 ```
 
 ## Get Help or more information
